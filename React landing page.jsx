@@ -1,0 +1,206 @@
+export default function MarketplaceLanding() {
+  const features = [
+    {
+      title: "Find loss-making SKUs",
+      description:
+        "Detect products that silently eat your margin because of ads, logistics, or commissions.",
+    },
+    {
+      title: "Real profit analytics",
+      description:
+        "See net profit after ALL marketplace expenses — not fake revenue metrics.",
+    },
+    {
+      title: "Scale winning products",
+      description:
+        "Instantly identify products with the best ROI and margin.",
+    },
+  ];
+
+  const names = [
+    "MarginPilot",
+    "ProfitFox",
+    "SellerPulse",
+    "UnitProfit",
+    "MPMargin",
+    "ProfitRadar",
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      {/* HERO */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-flex items-center rounded-full border border-zinc-700 px-4 py-2 text-sm text-zinc-300 mb-6">
+              WB & Ozon Analytics SaaS
+            </div>
+
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              Find where your
+              <span className="text-green-400"> marketplace profit </span>
+              disappears
+            </h1>
+
+            <p className="text-zinc-400 text-xl mt-6 max-w-xl leading-relaxed">
+              Upload a WB/Ozon CSV and instantly detect loss-making SKUs,
+              hidden ad overspend, and products worth scaling.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <button className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-2xl text-lg transition">
+                Upload CSV
+              </button>
+
+              <button className="border border-zinc-700 hover:border-zinc-500 px-8 py-4 rounded-2xl text-lg transition">
+                Try Demo CSV
+              </button>
+            </div>
+
+            <div className="flex gap-8 mt-12 text-zinc-400">
+              <div>
+                <div className="text-3xl font-bold text-white">10 sec</div>
+                <div>to analyze report</div>
+              </div>
+
+              <div>
+                <div className="text-3xl font-bold text-white">ROI</div>
+                <div>tracking included</div>
+              </div>
+
+              <div>
+                <div className="text-3xl font-bold text-white">WB/Ozon</div>
+                <div>ready CSV support</div>
+              </div>
+            </div>
+          </div>
+
+          {/* DASHBOARD MOCK */}
+          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 shadow-2xl">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-xl font-semibold">Profit Dashboard</h2>
+              <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">
+                -43 000 ₽ loss detected
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-zinc-800 rounded-2xl p-4">
+                <div className="text-zinc-400 text-sm">Revenue</div>
+                <div className="text-3xl font-bold mt-2">₽312K</div>
+              </div>
+
+              <div className="bg-zinc-800 rounded-2xl p-4">
+                <div className="text-zinc-400 text-sm">Profit</div>
+                <div className="text-3xl font-bold mt-2 text-green-400">
+                  ₽104K
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <div className="bg-zinc-800 rounded-2xl p-4 flex items-center justify-between">
+                <div>
+                  <div className="font-medium">SKU E5</div>
+                  <div className="text-zinc-400 text-sm">
+                    Ads overspend detected
+                  </div>
+                </div>
+                <div className="text-red-400 font-bold">-830 ₽</div>
+              </div>
+
+              <div className="bg-zinc-800 rounded-2xl p-4 flex items-center justify-between">
+                <div>
+                  <div className="font-medium">SKU G7</div>
+                  <div className="text-zinc-400 text-sm">
+                    High ROI product
+                  </div>
+                </div>
+                <div className="text-green-400 font-bold">+3832 ₽</div>
+              </div>
+
+              <div className="bg-zinc-800 rounded-2xl p-4 flex items-center justify-between">
+                <div>
+                  <div className="font-medium">SKU I9</div>
+                  <div className="text-zinc-400 text-sm">
+                    Margin too low
+                  </div>
+                </div>
+                <div className="text-yellow-400 font-bold">WARNING</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-3 gap-6">
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8"
+            >
+              <h3 className="text-2xl font-semibold mb-4">
+                {feature.title}
+              </h3>
+
+              <p className="text-zinc-400 leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* NAME IDEAS */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
+          <h2 className="text-4xl font-bold mb-8">
+            Brand & Domain Ideas
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {names.map((name) => (
+              <div
+                key={name}
+                className="bg-zinc-800 rounded-2xl p-5"
+              >
+                <div className="text-2xl font-bold">{name}</div>
+                <div className="text-zinc-400 mt-2">
+                  {name.toLowerCase()}.ai
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="max-w-5xl mx-auto px-6 py-20 text-center">
+        <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/10 border border-green-500/20 rounded-3xl p-12">
+          <h2 className="text-5xl font-bold leading-tight">
+            Stop guessing.
+            <br />
+            Start tracking real profit.
+          </h2>
+
+          <p className="text-zinc-300 text-xl mt-6 max-w-2xl mx-auto">
+            Built for WB and Ozon sellers who want to scale profitable
+            products and eliminate hidden losses.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+            <button className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-2xl text-lg transition">
+              Upload CSV
+            </button>
+
+            <button className="border border-zinc-700 hover:border-zinc-500 px-8 py-4 rounded-2xl text-lg transition">
+              Open Demo Dashboard
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
